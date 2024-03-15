@@ -35,14 +35,14 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
         const targetFirstStart = new Date(currentTime);
         const month = 3//targetFirstStart.getMonth() + 1;
         const day = 15//targetFirstStart.getDate();
-        targetFirstStart.setHours(22,0, 0, 0);
+        targetFirstStart.setHours(0,0, 0, 0);
         const targetFirstEnd = new Date(currentTime);
-        targetFirstEnd.setHours(22, 40, 0, 0);
-        console.log(currentTime);
+        targetFirstEnd.setHours(0, 40, 0, 0);
+    
         const targetSecondStart = new Date(currentTime);
-        targetSecondStart.setHours(22, 45, 0, 0);
+        targetSecondStart.setHours(0, 45, 0, 0);
         const targetSecondEnd = new Date(currentTime);
-        targetSecondEnd.setHours(23, 25, 0, 0);
+        targetSecondEnd.setHours(1, 25, 0, 0);
     
         const targetThirdStart = new Date(currentTime);
         targetThirdStart.setHours(5, 0, 0, 0);
@@ -62,16 +62,15 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
             setCurrentComponent('FreeTime');
         } else if (month === 3 && day === 15 && (currentTime >= targetSecondStart && currentTime < targetSecondEnd)) {
             setCurrentComponent('Second');
-        } else if (month === 3 && day === 16 && (currentTime >= targetThirdStart && currentTime < targetThirdEnd)) {
-          setCurrentComponent('Third');
-      } else if (month === 3 && day === 16 && (currentTime >= targetThirdEnd && currentTime < targetFourthStart)) {
-          setCurrentComponent('FreeTime');
-      } else if (month === 3 && day === 16 && (currentTime >= targetFourthStart && currentTime < targetFourthEnd)) {
-          setCurrentComponent('Fourth');
-      }else if ((currentTime >= targetSecondEnd && currentTime < targetThirdStart)) {
-            setCurrentComponent('FreeTime');  
-        } 
-        else if (month === 3 && day === 16 && (currentTime >= targetFourthEnd) ) {
+        } else if (month === 3 && day === 15 && (currentTime >= targetSecondEnd && currentTime < targetThirdStart)) {
+            setCurrentComponent('FreeTime');
+        } else if (month === 3 && day === 15 && (currentTime >= targetThirdStart && currentTime < targetThirdEnd)) {
+            setCurrentComponent('Third');
+        } else if (month === 3 && day === 15 && (currentTime >= targetThirdEnd && currentTime < targetFourthStart)) {
+            setCurrentComponent('FreeTime');
+        } else if (month === 3 && day === 15 && (currentTime >= targetFourthStart && currentTime < targetFourthEnd)) {
+            setCurrentComponent('Fourth');
+        } else if (month === 3 && day === 15 && (currentTime >= targetFourthEnd) ) {
             setCurrentComponent('Ended');
         }
         else {
