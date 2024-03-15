@@ -33,16 +33,16 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
   
     useEffect(() => {
         const targetFirstStart = new Date(currentTime);
-        const month = targetFirstStart.getMonth() + 1;
-        const day = targetFirstStart.getDate();
-        targetFirstStart.setHours(10,0, 0, 0);
+        const month = 3//targetFirstStart.getMonth() + 1;
+        const day = 15//targetFirstStart.getDate();
+        targetFirstStart.setHours(22,0, 0, 0);
         const targetFirstEnd = new Date(currentTime);
-        targetFirstEnd.setHours(10, 40, 0, 0);
-    
+        targetFirstEnd.setHours(22, 40, 0, 0);
+        console.log(currentTime);
         const targetSecondStart = new Date(currentTime);
-        targetSecondStart.setHours(10, 45, 0, 0);
+        targetSecondStart.setHours(22, 45, 0, 0);
         const targetSecondEnd = new Date(currentTime);
-        targetSecondEnd.setHours(11, 25, 0, 0);
+        targetSecondEnd.setHours(23, 25, 0, 0);
     
         const targetThirdStart = new Date(currentTime);
         targetThirdStart.setHours(5, 0, 0, 0);
