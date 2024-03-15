@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Poppins";   /*Can be any text*/
+  src: local("Poppins"),
+    url("./fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Speedy";   /*Can be any text*/
+  src: local("Speedy"),
+    url("./fonts/SpeedyRegular-7BLoE.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Moonstrike";   /*Can be any text*/
+  src: local("Moonstrike"),
+    url("./fonts/Moonstrike-nRqzP.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SDRobot";   /*Can be any text*/
+  src: local("SDRobot"),
+    url("./fonts/Sdroboticsdemo-X3led.ttf") format("truetype");
+}
